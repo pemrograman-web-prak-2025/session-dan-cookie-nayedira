@@ -1,0 +1,267 @@
+/*index.css*/
+html, body {
+  height: 100%;
+  margin-left: 5px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111827;
+}
+
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* Header dan navigasi */
+header {
+  background: #f9fdff;
+  border-bottom: 1px solid #e5e7eb;
+}
+nav {
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 16px;
+  display: flex;
+  gap: 12px;
+}
+nav a {
+  color: #6b7280;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #ef4444;
+}
+
+/* Judul */
+h1 {
+  margin: 20px 0 8px;
+  font-size: 20px;
+}
+h2 {
+  margin: 22px 0 8px;
+  font-size: 18px;
+}
+
+/* Tabel */
+.table-base {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+}
+.table-base th, .table-base td {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+.table-base thead th {
+  background: #f3f4f6;
+  font-weight: bold;
+}
+.table-base tbody tr:nth-child(even) {
+  background: #fbfbfb;
+}
+.table-base tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Tombol */
+.button {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #ef4444;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button.secondary {
+  background: #fff;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+}
+.button.small {
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+/* Form */
+.form-row {
+  margin-bottom: 16px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 6px;
+}
+input[type="text"],
+input[type="number"],
+input[type="datetime-local"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+}
+textarea {
+  min-height: 100px;
+}
+.form-actions {
+  margin-top: 24px;
+  display: flex;
+  gap: 8px;
+}
+
+/* Radio group */
+.radio-group {
+  display: flex;
+  gap: 16px;
+  padding: 4px 0;
+}
+.radio-group input[type="radio"] {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+.radio-label {
+  font-size: 14px;
+  margin-left: 4px;
+  color: #111827;
+}
+
+/* Flash messages */
+.flash-success {
+  background: #dcfce7;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+.flash-error {
+  background: #fee2e2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+/* Helper */
+.muted {
+  color: #6b7280;
+  font-size: 13px;
+}
+
+/* Section */
+.page-section {
+  background: #fff;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Fokus */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+/* Responsif */
+@media (max-width: 760px) {
+  .container {
+    padding: 0 12px;
+  }
+  .page-section {
+    padding: 16px;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+  nav ul {
+    padding: 0 12px;
+  }
+  .radio-group {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* nav container */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 16px;
+}
+
+/* kiri: daftar link */
+.nav-left .nav-list {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-left a {
+  text-decoration: none;
+  color: inherit;
+  padding: 6px 8px;
+}
+
+/* kanan: switch + auth links */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* tombol logout tampil seperti link */
+.link-button {
+  background: none;
+  border: none;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+
+@media (max-width: 640px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .nav-left .nav-list {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .nav-right {
+    justify-content: center;
+  }
+}
+
